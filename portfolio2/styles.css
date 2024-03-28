@@ -1,0 +1,95 @@
+
+body {
+	margin: 0;
+	padding: 0;
+}
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333;
+	padding: 10px 0;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("background.jpg");
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	animation: backgroundAnim 30s ease infinite;
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: #fff;
+}
+
+h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+button {
+	display: inline-block;
+	background-color: #fff;
+	color: #ff758c;
+	padding: 10px 30px;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 20px;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #ff758c;
+	color: #fff;
+}
+.picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+} 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.picture {
+    order: 1;
+    margin-bottom: 20px;
+}
+
+
+@keyframes backgroundAnim {
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
+}
