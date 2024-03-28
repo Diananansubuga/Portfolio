@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(photo-1531297484001-80022131f5a1.jpg);
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .project {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .project:hover {
+    transform: scale(1.05);
+  }
+
+  .project img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .project p {
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .project-info {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>My Developer Portfolio</h1>
+  <p>Welcome to my projects page</p>
+</div>
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="container">
+  <div class="projects">
+    <div class="project" onclick="showProject('banking')">
+      <img src="banking.jpg" alt="Banking Website">
+      <p>Banking Website</p>
+      <div class="project-info" id="banking">
+        <h2>Banking Website</h2>
+        <p>This project is a user-friendly and secure banking website that provides customers with convenient access to their accounts, transfers, and other banking services. It implements robust security measures to ensure the safety of users' financial data.</p>
+      </div>
+    </div>
+    <div class="project" onclick="showProject('music')">
+      <img src="dc0328bfe99d12ec6d108a86d35d51a1.jpg" alt="Music School Website">
+      <p>Music School Website</p>
+      <div class="project-info" id="music">
+        <h2>Music School Website</h2>
+        <p>This project is a dynamic website for a music school, featuring information about courses, faculty, and upcoming events. It integrates multimedia elements to showcase student performances and provides a rich user experience for visitors.</p>
+      </div>
+    </div>
+    <div class="project" onclick="showProject('cyber')">
+      <img src="cyber-security-glyph-icon-260nw-760520308.jpg" alt="Cyber Defense System">
+      <p>Cyber Defense System</p>
+      <div class="project-info" id="cyber">
+        <h2>Cyber Defense System</h2>
+        <p>This project is a cutting-edge cyber defense system designed to protect networks and sensitive data from cyber threats. It utilizes advanced algorithms and machine learning techniques to detect and mitigate security breaches in real-time.</p>
+      </div>
+    </div>
+    <div class="project" onclick="showProject('ai')">
+      <img src="artificial-intelligence-ai-processor-chip-vector-icon-symbol-graphic-design-logo-web-site-social-media-mobile-app-ui-158205566.jpg" alt="AI System for Automatic Cars">
+      <p>AI System for Automatic Cars</p>
+      <div class="project-info" id="ai">
+        <h2>AI System for Automatic Cars</h2>
+        <p>This project is an AI-powered system for autonomous vehicles, enabling them to navigate and operate safely in diverse environments. It implements state-of-the-art computer vision and machine learning algorithms to recognize road signs, detect obstacles, and make intelligent driving decisions.</p>
+      </div>
+    </div>
+    <div class="project" onclick="showProject('robot')">
+      <img src="robot-icon-1936x2048-ajs789m0.png" alt="RAPIDRESCUE Robot">
+      <p>RAPIDRESCUE Robot</p>
+      <div class="project-info" id="robot">
+        <h2>RAPIDRESCUE Robot</h2>
+        <p>This project is an innovative rescue robot designed to assist emergency responders in search and rescue missions. It is equipped with advanced sensors and communication systems to locate survivors in disaster zones and provide vital assistance to rescue teams.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2024 Nansubuga Diana. All rights reserved.</p>
+</div>
+
+<script>
+  function showProject(projectId) {
+    var projects = document.querySelectorAll('.project-info');
+    for (var i = 0; i < projects.length; i++) {
+      if (projects[i].id === projectId) {
+        projects[i].style.display = 'block';
+      } else {
+        projects[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

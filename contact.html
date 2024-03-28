@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Me</title>
+<style>
+    body {
+        display: flex;
+        height: 100vh;
+        background-image: url(image.png);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border: 1px solid #d0d0d0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 800px;
+      }
+      .header {
+        background-color:blue;
+        color: white;
+        padding: 0px;
+        text-align: center;
+        width: 100%;
+        margin-top: -200px;
+        z-index:1;
+      }
+      .nav-bar {
+        background-color: #f2f2f2;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+      }
+      .nav-bar a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 10px;
+      }
+      .content {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .contact-form label {
+        margin-bottom: 5px;
+      }
+      .contact-form input, .contact-form textarea {
+        margin-bottom: 10px;
+        width: calc(100% - 20px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .contact-form button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color:blue;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .contact-form button:hover {
+        background-color: #45a049;
+      }
+      .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+      }
+      .words{
+        color:white
+      }
+ 
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Contact Me</h1>
+</div>
+<div class="nav-bar">
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+<div class="words">
+    <p>Want to reach out? Dont hesitate just send a simple message</p>
+</div>
+<div class="container">
+  <div class="content">
+    <form class="contact-form" id="contactForm" onsubmit="return validateForm()">
+        <form class="contact-form" id="contactForm" method="post" action="home.php">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div id="confirmation" style="display: none; text-align: center; margin-top: 20px;">
+      Thank you for reaching out! We'll get back to you soon. 😊
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p>© 2024 Nansubuga Diana. All rights reserved.</p>
+</div>
+
+<script>
+  function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    if (name.trim() == "" || email.trim() == "" || message.trim() == "") {
+      alert("Please fill in all fields.");
+      return false;
+    }
+
+    
+    document.getElementById("confirmation").style.display = "block";
+
+    
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+
+    return false; 
+  }
+</script>
+</body>
+</html>
